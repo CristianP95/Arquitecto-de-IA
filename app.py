@@ -76,7 +76,7 @@ if prompt := st.chat_input("Escribe tu requerimiento o haz una pregunta sobre la
         st.markdown(prompt)
 
     with st.chat_message("assistant"):
-        llm = ChatOpenAI(model="gpt-4-turbo", temperature=0.2)
+        llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.2)
         system_prompt = get_system_prompt(current_phase)
         
         # Si hay documentos cargados, usamos RAG
